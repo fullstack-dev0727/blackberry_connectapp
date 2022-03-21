@@ -1,0 +1,1251 @@
+2016-05-23 00:03:47.0573 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"xb8j5yuRBR93kXHMPTs3n99/kcWo4nrBXNrXrslIcQs=","Subject":"ConnectAdmin","ClientId":null,"IssuedUtc":"2016-05-20T01:06:31.76","ExpiresUtc":"2016-05-27T01:06:31.76","ProtectedTicket":"K4nB5WXtxBXN5LjwsHHz_equWFMnaycrhUZVTPnlVn0Npv9J4Uc5afAtkucjfjmZrdumJkuPwCwi-c_dMObbJTd43E5KjHzTaMjUKZbryh_SF90Cj6gLEcOMJ8tXLpO5aosob6kGK4eEUb9Viqs2vfpoDqDhsfo_HDCHfH4_aC62iWjdUO0L_z0eLZLJr44vIoqnyIsRm9YiLZyzAVl4oJ-UPUJ0g3lA7ghFGvVAOYlOFDpDLpKpXByHFODWAuXPExJxNAG8iGt477SFvnFyt-Lp1zYHIwtCBE56eB9olKfctbQWrQfbJBQrVoOcBi9CFBgq1Niujz8SUlmRY67P5smiwjxA71VNW-VbHb2PNKpRlkEmUi_69OX4bUv8zjvzomGI_6EKw2HHo-dEQN4bpjARyGJ4yv7asIDCn71MLNP2onX25KxUm81M7qb5u9P_HhNcvZF2zp242LkDccy2g4yh4UwqR9uAc2L0_lK_8u6J5_mslibumX6_cVQ98mZS"}]
+ 
+2016-05-23 00:03:49.0417 [TRACE] - auth:Bearer:ConnectAdmin - UBTController - UsersController Create() called [{"Username":"TestRegionalSubscriber","Email":"paolo.rana.test2@ubteam.com","Password":"P@ssw0rd","ConfirmPassword":"P@ssw0rd","FirstName":"RegionalSubscriber","LastName":"1","MemberID":-1,"SubdivisionId":-1,"LocalityId":-1,"CountryCode":"ZZ","AcceptedTermsAndConditionsCountryCode":null,"AcceptedTermsAndConditionsDateTime":null,"DefaultCountryCode":null,"DefaultLocalityId":null,"EmailConfirmed":null,"Active":true,"Roles":["RegionSubscriber"],"AdminCountryCodes":null,"AdminLocalityIds":null,"Subscription":{"SubscriptionType":"Region","Active":true,"SubscribedRegionIds":["fd982c75-bff7-e511-9c00-305a3a7b79d7"]}}]
+ 
+2016-05-23 00:03:49.1198 [ERROR] - auth:Bearer:ConnectAdmin - UserRepository - Error creating new user [{"FirstName":"RegionalSubscriber","FirstNameReversed":"rebircsbuSlanoigeR","LastName":"1","LastNameReversed":"1","FullName":"RegionalSubscriber 1","FullNameReversed":"1 rebircsbuSlanoigeR","FullNameReverse":"1, RegionalSubscriber","LastNameFirstName":"1 RegionalSubscriber","LastNameFirstNameReversed":"rebircsbuSlanoigeR 1","MemberId":-1,"SubdivisionId":-1,"LocalityId":-1,"CountryCode":"ZZ","AcceptedTermsAndConditionsCountryCode":null,"AcceptedTermsAndConditionsDateTime":null,"DefaultCountryCode":"ZZ","DefaultLocalityId":-1,"UnconfirmedNewEmail":null,"NewEmailConfirmed":null,"Active":true,"LastUpdated":"2016-05-23T00:03:49.0417078+00:00","LastUpdatedUser":"ConnectAdmin","CountryAdminLinks":null,"LocalityAdminLinks":null,"SubscriptionLink":null,"Email":"paolo.rana.test2@ubteam.com","EmailConfirmed":false,"PasswordHash":"AAnCq+K+4OeSNSk5hpRc7u6TVOHSLUmcyBYEYEPZK5+tBTCtFFtywS7MX74Vda7bZQ==","SecurityStamp":"3887fb17-a4a5-42cc-b01a-bf4dfd722d69","PhoneNumber":null,"PhoneNumberConfirmed":false,"TwoFactorEnabled":false,"LockoutEndDateUtc":null,"LockoutEnabled":false,"AccessFailedCount":0,"Roles":[],"Claims":[],"Logins":[],"Id":"5a5f9e2a-51d0-4f01-84e4-43ae1d00bcaf","UserName":"TestRegionalSubscriber"}] with roles [["RegionSubscriber"]], adminCountryCodes [null], adminLocalityIds [null]
+ System.InvalidOperationException: Role RegionSubscriber does not exist.
+   at Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<AddToRoleAsync>d__3b.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNet.Identity.UserManager`2.<AddToRolesAsync>d__8c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.UserRepository.<CreateAsync>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\UserRepository.cs:line 85
+2016-05-23 00:03:49.1823 [ERROR] - auth:Bearer:ConnectAdmin - UBTController - Error creating new user [{"Username":"TestRegionalSubscriber","Email":"paolo.rana.test2@ubteam.com","Password":"P@ssw0rd","ConfirmPassword":"P@ssw0rd","FirstName":"RegionalSubscriber","LastName":"1","MemberID":-1,"SubdivisionId":-1,"LocalityId":-1,"CountryCode":"ZZ","AcceptedTermsAndConditionsCountryCode":null,"AcceptedTermsAndConditionsDateTime":null,"DefaultCountryCode":null,"DefaultLocalityId":null,"EmailConfirmed":null,"Active":true,"Roles":["RegionSubscriber"],"AdminCountryCodes":null,"AdminLocalityIds":null,"Subscription":{"SubscriptionType":"Region","Active":true,"SubscribedRegionIds":["fd982c75-bff7-e511-9c00-305a3a7b79d7"]}}]
+ System.InvalidOperationException: Role RegionSubscriber does not exist.
+   at Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<AddToRoleAsync>d__3b.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNet.Identity.UserManager`2.<AddToRolesAsync>d__8c.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.UserRepository.<CreateAsync>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\UserRepository.cs:line 153
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.UsersController.<Create>d__25.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\UsersController.cs:line 1073
+2016-05-23 00:04:03.4011 [TRACE] - auth:Bearer:ConnectAdmin - UBTController - UsersController Get() called (page: 1, itemsPerPage: 10, sortBy: Id, descending: False, active = null)
+ 
+2016-05-23 00:06:16.9793 [TRACE] - auth:Bearer:ConnectAdmin - UBTController - UsersController Create() called [{"Username":"TestRegionalSubscriber","Email":"paolo.rana.test2@ubteam.com","Password":"P@ssw0rd","ConfirmPassword":"P@ssw0rd","FirstName":"RegionalSubscriber","LastName":"1","MemberID":-1,"SubdivisionId":-1,"LocalityId":-1,"CountryCode":"ZZ","AcceptedTermsAndConditionsCountryCode":null,"AcceptedTermsAndConditionsDateTime":null,"DefaultCountryCode":null,"DefaultLocalityId":null,"EmailConfirmed":null,"Active":true,"Roles":["RegionSubscriber"],"AdminCountryCodes":null,"AdminLocalityIds":null,"Subscription":{"SubscriptionType":"Region","Active":true,"SubscribedRegionIds":["fd982c75-bff7-e511-9c00-305a3a7b79d7"]}}]
+ 
+2016-05-23 00:06:17.2605 [DEBUG] - auth:Bearer:ConnectAdmin - EmailSender - Sending email [{"From":null,"To":"paolo.rana.test2@ubteam.com","CC":null,"BCC":"paolo.rana@ubteam.com","Subject":"Welcome to Connect","Body":"<p>Hello RegionalSubscriber,</p><p><p>Welcome to Connect! Your new login details are as follows:</p><p>Username: TestRegionalSubscriber<br/>Password: P@ssw0rd</p><p>To get started, please click on the link below to confirm your e-mail address. Please note that this link will be valid for <i>24 hours</i></p><p><a href=\"https://54.206.56.226/ConnectWeb/#/confirmemail?userId=55eb6282-317b-46a4-9b7a-edf53189e35b&token=Wqyq2dnyAnzTOWMH00VyMCRrx%2fxOdDuMGmcFrKxK3boPRdHl%2ff41Gevw7PmLsTKU3vysI7grFLlxPonlfJ%2f63XaZjotJ6xl5T3pYu0fWTyXI32k3UmOgqW2z9AQssUGnhyOWqyMxa2uMhWOe8LehE6DVC1do%2ff6LxZZG0ZrK8BGC1yOJmJnhXEW8Y4vrtYMg\" target=\"_blank\">Confirm your e-mail</a></p></p><p>Kind regards,</p><p><span style=\"color:#002040;font-weight:bold\">Universal Business Team</span></p><p><img src=\"http://746573d242545b710adc-c2ddda513a9840d89e8fffa0ed6cfdd0.r56.cf1.rackcdn.com/webform_footer1.jpg\" width=\"600\" height=\"113\"><br>\t<a href=\"https://app.smartsheet.com/b/publish?EQBCT=189e676c9a564c4fa03455da61d60e14\" target=\"_blank\"><img src=\"http://746573d242545b710adc-c2ddda513a9840d89e8fffa0ed6cfdd0.r56.cf1.rackcdn.com/webform_footer2.jpg\" width=\"370\" height=\"49\" border=\"0\"></a></p><p></p> <p style=\"font-size:10px;margin:0;padding:10px;color:#666666;background:#eaeaea\">\t<strong>Confidentiality  Notice &amp; Disclaimer: </strong>This  email and any attachments are strictly confidential and remain the property of  UBT. It must not be disclosed to third parties without the express written approval  of UBT. If you are not the intended recipient you must not disclose or use the information in any way and must delete this email.  When addressed to our clients, any advice or information in the email or its attachments is subject to the terms of our  Client Engagement Letter.</p>"}]
+ 
+2016-05-23 00:06:20.6668 [DEBUG] - auth:Bearer:ConnectAdmin - EmailSender - Email sent [{"From":null,"To":"paolo.rana.test2@ubteam.com","CC":null,"BCC":"paolo.rana@ubteam.com","Subject":"Welcome to Connect","Body":"<p>Hello RegionalSubscriber,</p><p><p>Welcome to Connect! Your new login details are as follows:</p><p>Username: TestRegionalSubscriber<br/>Password: P@ssw0rd</p><p>To get started, please click on the link below to confirm your e-mail address. Please note that this link will be valid for <i>24 hours</i></p><p><a href=\"https://54.206.56.226/ConnectWeb/#/confirmemail?userId=55eb6282-317b-46a4-9b7a-edf53189e35b&token=Wqyq2dnyAnzTOWMH00VyMCRrx%2fxOdDuMGmcFrKxK3boPRdHl%2ff41Gevw7PmLsTKU3vysI7grFLlxPonlfJ%2f63XaZjotJ6xl5T3pYu0fWTyXI32k3UmOgqW2z9AQssUGnhyOWqyMxa2uMhWOe8LehE6DVC1do%2ff6LxZZG0ZrK8BGC1yOJmJnhXEW8Y4vrtYMg\" target=\"_blank\">Confirm your e-mail</a></p></p><p>Kind regards,</p><p><span style=\"color:#002040;font-weight:bold\">Universal Business Team</span></p><p><img src=\"http://746573d242545b710adc-c2ddda513a9840d89e8fffa0ed6cfdd0.r56.cf1.rackcdn.com/webform_footer1.jpg\" width=\"600\" height=\"113\"><br>\t<a href=\"https://app.smartsheet.com/b/publish?EQBCT=189e676c9a564c4fa03455da61d60e14\" target=\"_blank\"><img src=\"http://746573d242545b710adc-c2ddda513a9840d89e8fffa0ed6cfdd0.r56.cf1.rackcdn.com/webform_footer2.jpg\" width=\"370\" height=\"49\" border=\"0\"></a></p><p></p> <p style=\"font-size:10px;margin:0;padding:10px;color:#666666;background:#eaeaea\">\t<strong>Confidentiality  Notice &amp; Disclaimer: </strong>This  email and any attachments are strictly confidential and remain the property of  UBT. It must not be disclosed to third parties without the express written approval  of UBT. If you are not the intended recipient you must not disclose or use the information in any way and must delete this email.  When addressed to our clients, any advice or information in the email or its attachments is subject to the terms of our  Client Engagement Letter.</p>"}]
+ 
+2016-05-23 00:06:46.8699 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"jVlkwim0QN46SQUa3/wRyWpnIp7rCZULPj4/di7HGsc=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-22T23:53:36.603","ExpiresUtc":"2016-05-29T23:53:36.603","ProtectedTicket":"BpNpGrHWYrmFTHTkO7AXbMOwtcNelsut-_b9RrR1A6Rs8C-PgVdyxEjE74bYs6-jL3WGUh2YURSgFqBWntbQNP9IUcwGFxj3WMvczKXUsSLed8myzO7MMhCy0-dO54HBuXS2yQMMQLk4yrCw1JdFHbYVahwIQRsKGdODb-2IXHrsLdvDw6GY_HuV0jSxtl0nDGIIPUctOTK7h70d1ucRHDFB5LwczSKbJW4Qo5vTUcw9KES3gbYdelI3YO4aaaJ_48q2Gm1d0PNlLs_Tu7A75s6C-QfdV7WfEtqwxh8snIJwt32NMMLkUHtzx9VmQoogN3wKChyvZXCVMYZvlfi5H8ua7hqrbzxjgpEUhwXRaAxXnKH8H4OCZ39KytFEd9PUSpW6V5tXLbSAjSxUBVzKEUZQLhuFM_Wa-3sapDUtiDeGdeypnsy5otx-_aHMv3kJ1LNGfQRUNjLk6ocQGwDmyxqWolaSoMCBSLePUCC9JFE"}]
+ 
+2016-05-23 00:06:47.0886 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 00:25:54.9955 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"RpaZ9smzDpX/8bhBd9IU//rlOVIRkKz7B7mzmlYETuU=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T00:06:46.853","ExpiresUtc":"2016-05-30T00:06:46.853","ProtectedTicket":"0h7UmQYSGoS_68nNSG5_rH7xG7IxXwdvIhmAR-ze0_PVicn7h0gyRl3SZUuYAIWz__QlGcEsRWv_e4cYwXbMK4V4uQl1VOB-RkqWZdknOlgXVXPUfBnXwJhd2GvZFRJPAh8v7mtnZ9oj77gejet8gnAJVpSQjfiG4-rb9R4duwN4Xwz6DpI59RiRXGZoCmVRgaAsHEx2H2I8MeL9yfrkXrenYo1xJ8gQ4uSgkfGNwx7VHpq5xHlrcnoNk2fd68QqGtC7DRzMZ_SwHzAHDvSIlT6rI5ELKLwsG5pxznkGZFiQ3h8spkS5_1G1MfXRSQniaLhd1wGgZH7WDYsCA8fCE8ZdnJTVJVifF8TuBCan7DuSHO37VjfjP6jl1jxnGqunK9WTeFxt898pCoQmEnjlaWThUjJWjW45LCrqXvspDW2PigJnYWWezd2myVLmPFbmifcwJT5nfxc7I7VQ1iTXpPElzCy1rIoYg-oxtGuViGk"}]
+ 
+2016-05-23 00:25:59.9017 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 00:28:29.6206 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"B07OC8Pf4jJmR9rNaHx6csD3LCsPUMdcwotAumf6aqU=","Subject":"ConnectAdmin","ClientId":null,"IssuedUtc":"2016-05-23T00:03:47.057","ExpiresUtc":"2016-05-30T00:03:47.057","ProtectedTicket":"kqfgj3w2QYmjdwvshILFYswrRHULRwLGhd1Z-Ds39ZXzqf5WmFoVAQhzgN0MgaLD_TerRNjTO5MYQIAevw59Bal_qgXrvBDFLvmHsVXq4mxXtxZth6UN8ADYtkZwtgmToo3bn2YYl38e388CebKjntsID6DNpR1eDDnwbvDKVeyl3QfbkBFJrttBDeVOsCzGXhitc_ZDVLOzpg0KrHF8oHeKDNF04L4b96ahVIWXO7jyIWlyZxRKoqDr0eRYd1DgHtxO2suwKiRE9JBxDprY_xpjHGbk-638A91F3hltznr54M9H35P6Q2NDuJJnxlFJHB0pNSw0_uwnnedSeoFdRu5EKijLMTsPnWwrXa_TSzaqeABsitH4xIEcrgPU6QioIWg2_CJzDFZLygV9oM2ZroMrvl5-0ka3jyK8w9gHahMyS4Ya3ru9itK9VVBaovRRfyj0tMS580ljaj-u7jBzBO-yaGIgZ5D3zYRWSqwC1Scv9FEYng_xkr2KoyGHZDx3"}]
+ 
+2016-05-23 00:36:07.8395 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 00:37:31.7458 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - HouseholdsController - Error getting householdId 59878
+ System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details.
+   at ConnectAPI.Controllers.HouseholdsController.<GetById>d__1.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\HouseholdsController.cs:line 46
+2016-05-23 00:38:19.5584 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - HouseholdsController - Error getting householdId 59878
+ System.Web.Http.HttpResponseException: Processing of the HTTP request resulted in an exception. Please see the HTTP response returned by the 'Response' property of this exception for details.
+   at ConnectAPI.Controllers.HouseholdsController.<GetById>d__1.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\HouseholdsController.cs:line 46
+2016-05-23 00:38:37.8084 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - MemberRepository - Error getting children and siblings for member id 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 1724
+2016-05-23 00:38:37.8240 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - HouseholdsController - Error getting householdId 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 2015
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.HouseholdsController.<GetById>d__1.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\HouseholdsController.cs:line 39
+2016-05-23 00:38:49.3552 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - MemberRepository - Error getting children and siblings for member id 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 1724
+2016-05-23 00:38:49.3552 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - HouseholdsController - Error getting householdId 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 2015
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.HouseholdsController.<GetById>d__1.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\HouseholdsController.cs:line 39
+2016-05-23 00:39:49.5740 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - MemberRepository - Error getting children and siblings for member id 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 1724
+2016-05-23 00:39:49.5740 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - HouseholdsController - Error getting householdId 33979
+ System.InvalidOperationException: Nullable object must have a value.
+   at System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   at System.Nullable`1.get_Value()
+   at ConnectAPI.Repositories.MemberRepository.<GetHouseholdById>d__6.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Repositories\MemberRepository.cs:line 2015
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.HouseholdsController.<GetById>d__1.MoveNext() in C:\Users\ManojDemel\Documents\Visual Studio 2015\Projects\Connect\API\ConnectAPI\Controllers\HouseholdsController.cs:line 39
+2016-05-23 00:43:42.5429 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 00:50:33.7775 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 00:51:48.3088 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 00:55:37.0433 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"eQuHDS+Ct6QLuqqgkcNoHDT7kpDu0RNyAPLOfSIY0VI=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T00:54:56.84","ExpiresUtc":"2016-05-30T00:54:56.84","ProtectedTicket":"Ecnzr9a293NtQIH2mvpApAsxwYuE7_IKZUCc5wI06_7wmHHplfSNjwFy5D7j6vpKj82-FouN5S91oC_L1ugHLqihsydj9PlEKRt-DMi6jTkKHtYd6EQ8T82zSQrqoaFbU3xQEqZcJ8XeEO5wfqyGF4VtqZ9Eb8dlMjtLSrsZqg0vO1uKzml-iPu1PI-80nxXPFc2mW_I8pVWTWkSsQ0w8rm8bDtUbnLzgabeO2rsnOIx36_hI_sxlgetReYrt9q7Z0vZzK2fh1smYhBF7tBEU96Rjm0gur71aXR7aBvfN6LR7h101QpwTsA3vdwnj6CBaaH0Fun6Mqt_mUG6luoSN-lQ-et14kMy_vtIQ7P9ogQ8HNjwFgZX1yH8TV-3C-5l03CBGxI4yDiWhVTw0FyrKwf4w8aiWrwEdQ455IaaVSYDRNvl1UOz7Tz9otZL1szd19hZ9DDd4Q341dzR9KVYiA"}]
+ 
+2016-05-23 00:55:38.7932 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:02:53.3872 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"oNE8SZ1nbgxrJAdWzXtZKkZHCJ0Q99lM72KWlJP517k=","Subject":"ConnectAdmin","ClientId":null,"IssuedUtc":"2016-05-23T00:28:29.607","ExpiresUtc":"2016-05-30T00:28:29.607","ProtectedTicket":"6bEDusAPNSwoXq6vRbs6N4BFU-oUdOeVPkgVl7Pjc_EYW7yxLIU0vY8nbvt1JFKkQbSHubj4Q08pMdWqk4RRYXqE-TN-cXmqcYozuvPjs6Cw_2jwJGLoBym-qBrl0nv5QBOlxg7OQFIwL09OVvWLyaIQrMYyRUc53Zy44sVKDPTcUwV13dSaykii7yl3MMK-UuPnINVPhbLO-keDENOHAHUE9qvtCeFteqUx3ZAyr2bjwHLGjycvSrKqdM5qL0IMmHSdE6LfQRHonFFshLL8J8SV-WXcEnbOMyVfpL_B1cYebv09GFvcu6bImMR3Dmz7sggzu6L7wLruHipd0oVBeErq4WC3y4Vtd_zRYpCCcFwjOD6y8KXTG7210dY3PgXEuazU8eaj5E5BX_R2YR86xJT_Z3KGnjsptWS1Y1qvgPLYCeg6FgmkEJrkeIRRcDP0YYxlXieFc1ZmLvjQTUeuzHq3tsxUf4Qc9IwPoBKnJ6E5-AcLjQmWxA-Ha3Y9IFAz"}]
+ 
+2016-05-23 01:07:12.0280 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"s510j5hzvHqN3OPesc1mUqBMmIykIrRhDiD9PhT7fcQ=","Subject":"stephanie.mclean@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-13T05:20:01.777","ExpiresUtc":"2016-05-20T05:20:01.777","ProtectedTicket":"URgrCgSiK6-VIG7-WxNGlX_bAk7YaPoxyKDJc4wt1q0oqHtvlja37Hjwvv5wgCTs5l5aPYvl4ydXHZcxOVwyvwlY8L2Tk9uYQ5kXp2pczihUgNq0BPuDDIqaa0RHCO603Sl4S9RCGD-rKqPhA3vVx-Y-us3dCQlylmMq78r4E5CZnEUXr4ZzwyvyT7PNgMbmprZXFJlmPUKlQPaD21KVC9zCgb2k8qeXOeQELt9K0BC_d8LMyOYbjpFahI0e5TaSS4F2YnYDT6pCW8lKZvfwpfuLXrE6FiSFLzu8ieWoX4Vn7RKKXKSMsgs8r64rVXyWSFOJUNGtGVVQRR2hUVetrggh6-tgJ_ydp4MJP-fJQ0PNsVrhPxbWi1D9UGVgMwcMw7AfMU5FRg_Eww1r51husmPKnJi5_J7tI8EW514TBogRdhkdNBbl5LJAoyA_TGj5L505fZ7FYlN5UKXJTbDe_7O-XCZMQpsnT_SDkiQOf2zHBovtwrsdcsEIFp9pRMxN"}]
+ 
+2016-05-23 01:07:12.9968 [TRACE] - auth:Bearer:stephanie.mclean@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = stephanie.mclean@ubteam.com)
+ 
+2016-05-23 01:11:50.9813 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:13:07.0438 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:15:04.6220 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:17:29.8565 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:19:57.1378 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:23:36.6535 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:23:52.4504 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"4xdE9Tqw3dkeGHA6lnYMpinM4zZDFrlOlbzZAvRlNCY=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T01:23:49.623","ExpiresUtc":"2016-05-30T01:23:49.623","ProtectedTicket":"aWH55Mqg1lzrrZXKg2dmGwrJHXO58sTWvJLjCL4png-sVOxLBKtqlpgie52De68f0hCyPerBlqKjM1qm0TLxwns4t8uNoHMsqX7Yq2oVGgc_R1LNqB3N0HwuFGMq6Bq6aDOOfIBGQztSjN_bQq0v6y9JjhOGQsVqE-lUjkDeOntlPTkMLDKsgJUzajXwjfwTdrELSIpy-v6KW6XCYa01aS032k9t-rSpZMcFC0L3aGHpRGR-j0ZBgBe97oELmpI3SR_onRgzNcwB4iSKVjYxTyh9R9w43NEJkuf8hOGe0aUzVY1LqW5oRbBUJK9WedaM-5qp74yErADQui9lk_dYozprNLNuojjaZ5FnezNzIFumTtb3wrpIRkd8OgvYDNi5GBYfuTJvnWNKkgQ1OXh14jaaS-Et-yfLbS1E_gRCxTb5tf5RYZ0b0ygEDi1O7v28q5JydRFN5q_WNLw_l104lQ"}]
+ 
+2016-05-23 01:25:55.1692 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"85qD8lK6Gk32fjcJlpR0eXr2slpZOK8QEXJAPJUsAgY=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T01:25:50.013","ExpiresUtc":"2016-05-30T01:25:50.013","ProtectedTicket":"BqH9bCH-AEIm_KJM-890Q1lgXRz2votbc_XeeXLDZfSi_tsLSsUO8jrAelCjd_xhiMHktduK269hJWIovpVkcMHb0lI0jch8VW7cjTezPvLaaYAfCA_40wRdKmx4MIiXc0GyTOuGRC3kkRUnSs_WBrOZCHfpOCo42NaWydpHIxmFNXPnM_iY3sfk4U7UQUU_pHJfyUHak5N_fxXNiQMySDSfL0B21vj12QCDU62dc6F8uxNVn-E4aln-P6NQDQc9sCTqQkYDlfcCq5FnOJOxJ3ql1eWriIIRXpphTLDv1hoXexf8WrQBiNBkBEFoNiAmIzH9NBwnc_sb47Pvl6839TyehMkKb7WuK3_TyhCVqMje2mrfBQznoJohPJ795PUoEq9blKperpScO2ht2H6nmxwu7k1Op82qjVKlZDSC2Ho_by90E_KK0CZl2Az3dnd8uM5KebhaVYr31gag2of2Lg"}]
+ 
+2016-05-23 01:28:23.5755 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"g9XRKVtNn6EvnE3mY3z2rJKp0Cqfpx/1EtF4eCdNSwY=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-18T06:20:42.493","ExpiresUtc":"2016-05-25T06:20:42.493","ProtectedTicket":"uiNm5KZ4yvpRPGB0HULkQZW6yKjSzUOFkXH9ltrfPsBmx3QQ4FI9GbzSmwmsp9JrU6e-VSYZIRDk_MAp5KXAxUf1Q0JX2Ex-qonDiRjuQqK2q3zgTxM82sJAlQkwlKqWVxTV6p0T3PQqOK1oZcT6YvnIgry1FqFJdIPGGY3YYIcsnG4wDg_UG6xg4fwy88bhA5XjMwWBskE1ntfMwu1SK2C0tFuhtgfZDmVDUEmtkcHeK17joiYUzJOJE1opsRSUkHp-UW1KPaQSSa36miHsgHVc3R4M3N5lTObo5Px6L8iuAHVZd9Vi9QRY9lniyAeNjw29wNmLqHL0Q1sec9IOzsiStoLxytNqcJ_P4xm-1EKY_mLVyrFBCtJzHaQKhYtXuI4NDB74kJ119r_usVjUzl8BheMRnGGZqZ3qRx72RqlyUdj5IK3TcNbGIcHT9tlpiKZNINy9_X1Peylj0Z0YxgLws2ym_8JAAH5Ro5qJt5c"}]
+ 
+2016-05-23 01:28:33.2161 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 01:38:33.6071 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"nhV2JOF/etgWJrrtdbYa6QN1p0SpHK9BFSUAzInvbUM=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T01:23:52.45","ExpiresUtc":"2016-05-30T01:23:52.45","ProtectedTicket":"AkEL00UGX8H6QJSmCSZIZOKiWp1Q1rb5HJP0z8ZqttQx126ohv_TrF8I1MU7bsYOdqrNXznt717ndbcRM4Ifo61geR87wDlPiFhAbmR5pd8N6-nEfHlG4KAf2dhCDaYXRBdnO81sGjnZ0Zlwx2ZoPSAnJYR86Ee3gvVN020byoBUtsp9AduQa8YOBYqf9tM_Mpkhws6xQLJXMe-1YHlRn65bOXWOmDkzE9-mB-e-Twt8QYVVpoUtRV0lc2jSSz3FYU3OW7SRZ_5eoU4Hp1oUdS-7UbM1qEPzdpAZLS7UlFlukiTwOMznJzv7nD8rsUo5eEIFY6z-Wa5kaWkUlvrD1WgznFT2CVeJ-dqQR4v44oYIroNKX8J3XpeCKXkjlU3h8GiTRyfCVmgzYP0HenVzZPhZJwrlHxgiR7k6viKmH1P51iOGdFCTIhJ2VrxyDrJ0acUowTtcXy1S_v6GRnKtjA"}]
+ 
+2016-05-23 01:38:37.2008 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:38:56.7946 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController SetDefaultLocality() called (userId: 55eb6282-317b-46a4-9b7a-edf53189e35b, localityId: 145)
+ 
+2016-05-23 01:38:57.3415 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:39:09.6227 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"3NlkC/SbTMKqRFQP2gQjvWHNVjkl293TSr38NeWmVUg=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T01:38:33.59","ExpiresUtc":"2016-05-30T01:38:33.59","ProtectedTicket":"ahMtp48BJw82ldZipgDCWYfKOOmEY7c9F66Qc-F_PiZUUWEHvl5aUcaXLKk-XsEAwSPRXs5ydcaWs3-1y0fpXZYEHpawH5B_sYx_6oxGkf2gW0HIbttuBnSQhqrdiBwAuImDj1wEWneZ9clMjGkEJor3siLgwm-uBz6VbsFgpTxH_OH-EUvR55xNtoeZX6lCWUngZu6nIs2oDxuoTYrmzjwLpKqHl2F9nxbPLHeyF9eL0ujMzVZ1nX6K6EgKwMY1dSSWb-lpYbJM-43TL6jM6-XpfQy409a0W11nQHfQM3lj_D6AQKAtxFWKjGKOA9TmcHJw7QWNGJHItmYaS7KFI-IiJN4jm6yQplYZqZAp2uyZKdX86DeKGJZxKRa4R0WeAM8xvABdFj4-GhCi02Coj-8aY79jf9QI8gMMYWWHWgVFkCZrES7PtgvWe3owQMwzQI-XEycHDPAY22hyGBQe6K6i-xRvvI8tUhrw2I2RvtM"}]
+ 
+2016-05-23 01:39:09.9821 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 01:40:37.6384 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController SetDefaultLocality() called (userId: 55eb6282-317b-46a4-9b7a-edf53189e35b, localityId: 182)
+ 
+2016-05-23 01:40:38.1228 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 02:02:36.5766 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 02:04:56.1391 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 02:06:15.9517 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 02:06:50.0142 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"aPbBZ7q4hiJDU1Y747+PIIO3ET7bI0BavzGZx7741xg=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T00:25:54.98","ExpiresUtc":"2016-05-30T00:25:54.98","ProtectedTicket":"aojogVr4MCWCmSuBzbl3UWtalnlHdnTl1ADNOBvel-LPhpVEHCF9hxdxUFKko6VVH_gAkZecWvT8RaKe0afbgdZZfDlG2WaUQmYlFL_9WoInVoBr1tHPzluNNdnvz0oyeF-tvck8tmSJQdReFhq09K6rCGdirJy0OBDaU5XT7xlppIeuT3OGfhsqQCabPUhdyIorfW4IXffn2b1LCKT9HULCk5QSuzJ8vuh-j5gp3M5uouq3vTq76ZXTOYtqPhbse_xK20a7keG2ijLnEx33g2POQ3AClU6Wb8dOQmROCXCAkdcqw40XGD1PHY86XvUxnmg1Pzfqmdu1Z7lFE2Wk4aHmzbN30Poi_qPRBkqBYVDrK-hBuZBSlbzXGa1QClKVW4QcxLwOSfZik5oeiSQA5YjxrP2Byw3RbS6aeKsZmJizeS602C52XSLUbw_55Okoqp1zfJmF0O7dedq0corUYYcnV8aA8MYZO2qF_pVq1KA"}]
+ 
+2016-05-23 02:06:50.5767 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:09:13.1567 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"QNHLjdKkB4woqL+pJlFTrASCu4Ht/sIGJwkg0z5XAc0=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T02:02:36.39","ExpiresUtc":"2016-05-30T02:02:36.39","ProtectedTicket":"zwwI5HtbabXE5yQhG3xPWz86ZSSu0LjF8FNdZICBHgrwzNm_2bc12jFoTueM7AA5528KC3ctFh85vrOt41VwoN9e1OxCiKONU31kHqLAaIlJj4n0uW1JZfA3eF9P0o-X_2TjXS2l5nf5jVQ36E5UdPO5OesPYh8znlekJG1xYcuXl8qTiX7mXO-y2wCoBQFFZ23eL3JDZRfr0HYsYahHYyeW0lo1AAfh8mRzLB5W8wKWfrHwe7cXx891AL59UtRGfuUu4s1d12Aj1k3nIy-Y7lhF54DLkmlOA2K7mXsczUuJ5IZq3fUO-jt1SgatQNgRDYAjRbsZzje4Z0h0mB7294PpCUCUKb8UtXZ6JOMYWZPqICXixEpeei4OOOA1ReZB3I7WIH08Amani4FboeFVJLAxivfp2H-s7IZkTJ2hA0bQwXkMmCc9_PqjGDSVzB0HQAJtQ4CtIZX7matTOaX0SLONVQhM1lBoeF45akbKCYo"}]
+ 
+2016-05-23 03:09:14.5161 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:09:28.7349 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController SetDefaultLocality() called (userId: 55eb6282-317b-46a4-9b7a-edf53189e35b, localityId: 517)
+ 
+2016-05-23 03:09:29.1880 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:10:52.0005 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"/7vfNONhOuGgBI24U2EtcW3xXvLbE4r9lP0ZRV1pTLY=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T02:06:49.75","ExpiresUtc":"2016-05-30T02:06:49.75","ProtectedTicket":"GgnM8o4ZsOG3dj4o-JY8BMvLJvVM3v-BQRGjtgr7TkFoOv1kBV2C6zsOZKhEliXP0WfvX7SPXpk0CvHBEI1ZPdqCgPLuK9i7N2cviNFx0J7fKiw3A3kN_S6uN5wgAkyJqaykO_Ufpiu2dPVp0qtdy6HbV6SQduStsbRrKW_hUqxXjNjUFmtLM3NP9wJC9Mi2lQ0H7dIb9bR_-5wfE-aAt0ODnp3xQ_wdGbqLV8ZxSxbl4f3saY1pRfYG3rTJ-CwNM6KG6v7-nmrGR0G_fvVDEZgZhoOktd2KxqGtYJfM8niToHp05mNvcz3ryGjPT4ip5Rh8yqVq_Iouy6riwkYTyc_fCaf4rRjWrH1pdrko7Ywv-abxpzPNuobOgeGKbLhXSfJ4yCyNV5z0AbffgcqQ4hvImUP-U42NFZOmUMw_kQh_1t2gNq5u2Nf4UR9prD1s3YtoKsOnRF7faT2gLcsvts8Auzofr0esO4iMi7xA82A"}]
+ 
+2016-05-23 03:10:52.5630 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:12:03.8443 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:16:26.4695 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:17:17.5476 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:18:19.2977 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"q7G2C+2H081TXTS90D14O9j5I0DI43HN+nR57hPL+OA=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T03:09:12.877","ExpiresUtc":"2016-05-30T03:09:12.877","ProtectedTicket":"0y52sDcv4NLYhKuFI2kEOlsTZ-tWU5XijiUy7Lzl-D8PZoMV123jw2RMpBZ0hR15yB75q0ahCm0ZT2O1XlPYBDbAYmCbxiyvKvZOZeOiIdRK1n6oXaZ_ItfccIkEKbLzcl-ztEXG4WwPK86Bwavr4A98coZ_tJykmQs2l1F2TS7EWyBDc6miBZIj_owmmn-D4hA2GK6y5cfPBuh8WTV3T61XW2_gcMsopAHftGpLPEwkV-PaaxwZMfOCJ3JBtcZLRhzX7APyHzlkiOvjQM9gZJIIkC1dzDYbmW1o0_P5fLF9AGWO74iXrlT7lKUVW6RG3tTMEvpD7U03Wn7x1TKWFpS5jkevgdzIdFyTqiL0WJth0RreUakYzL3h3u3XoP771BIlqo8WBvQOnyb_VTCzIZAzJhN5bFvcaW578sn02EK5NsITvw_pB6UvM-3uAVijmy0edJTzRTCdlWXH6dZTLDdqXxn2_yx8DS4CFQtgnSg"}]
+ 
+2016-05-23 03:18:19.5633 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:19:38.4383 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:21:22.8133 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:26:23.2042 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:35:18.0638 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 03:36:14.7826 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"N6iLGc6jr5xLVgdnKa1pzn3nDlx1txQcYCDO0vWuJgM=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T03:10:51.987","ExpiresUtc":"2016-05-30T03:10:51.987","ProtectedTicket":"m0Lpy9DFkqAd0W_x3GYhhirOhLNZYQdUigfPmt_g3K2CZJ_SymUH5hu65300zaZ8oL8cdIsEVA-l9IowJExdDNZ8T4eLks_kjPARE4FgxwGK1y8Sd13kAcORaEueBWUhe3XnIWHE89drTcrNl_5Un4gHYG_xul3Yq6qyF2P9Ld__v_EsU2Mz-CpWPsF4ZUqfm9qLr2e0I_xHGOV8wyHQu6RRoQG6w1ibMtyJXNO9VhhsIaS8g80FXRBtefWoe1p9faG9Cn4krip8qUW9mBdEAaKvNsvjy_jgwn_mf9ljucQFEBJFjt_tN9N_CnZoO5GYH14sbkQu8LQuor-KyU2FrPG3mbE2yxiHJr2gSs3SkZxGYoefgzKhNO5_ENb5YChgo9c0EdNXuM4NSiTuFzz-cpTEEy3nZIu-BtIBAqV7meljlDT7aekeL3s4WNNHIdrK1iQ2Cb7KQ3O3bOGKV1YzkpWwvqZvldQP881rRKDyFFU"}]
+ 
+2016-05-23 03:36:15.1420 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:36:29.2670 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"8HAHj+YSR0O+gxVtNwBpreRMv5tM88DjzEvmtG7t61s=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:36:26.767","ExpiresUtc":"2016-05-30T03:36:26.767","ProtectedTicket":"JozO3791mBFlVnWQs_gnILvmfuk8j8mh7A9Qqao-nirIUB7of-m2cjIy3h3NkOeMD1V2ER0hEBF0hzPTf0cB6AFAIxO1r52PehY1xNpw4YROrAhR9rplJj_JuTKnU8GvqMhhZl70KtQYifMcom4JCWN32YzFPlKb3PwvRNkj8Ec48QsbUq7OporwJrclV0NFYTRHbPMgJ-gzlAXnJZ5gTUtD9yRaV3WbelXpBh41xyy7xksw7IkLGQnN8qqCkRxtF0MnbsVTAO5kf0_9RwzwRyi4wJk8n4TDLk_YVo-aaNc6vJS5Fs3sBOT7WnDWhKbsv4CgfXtvO9owMfu6Rqz9sXyl7MoHvrYkTg2n-7SJVn41vH8F5GY3pCgKJV_aPTG0f8xPxqLlBcTxwGB5vdnP_doWxzFZ6jnSuNLRxHxqCNU-sh4s4ph0KPXBaR8GRQH7bScsJtCxVmeO86i7KV8S5g"}]
+ 
+2016-05-23 03:36:31.9388 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"1j2BCliZ8vJm/0uSBm2SZHyKgmNGIwXum85mmJ0tHoY=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:36:29.25","ExpiresUtc":"2016-05-30T03:36:29.25","ProtectedTicket":"03E-IBfknEY1IQMNCYG9Kpjhpi88r2zlBVRjR1yj0hfEU_XYP95y_xk9pPyA9pFzOeceBaQ6VYRztyO6c84sszqTkEDeHX4yuxRZAaedDNhxag2QDcBtBbD7NSScc8Ww3c5uwH-2h50VLiwWU1YG7692Qy7njAijdtlrqxmGHC3chxEhHPcDtSNqRtpCzqlVYIjQ7IlmysgAFZ5AXNqQu-Irqw32V-AJ37451s5g1Wov6gA4ZvyEJFwQXwqFCgGM3zgqWIDAyevI8yiQ69T7thhYdezzd5kbV7HmlBwzdkuZiQx6Ae9K3FYFFX_J86xbkSOerHr7fZ8W2yC_eff3VnweQdxEPoBOyhQ8P6LYWJ1iPXs2NaR4UgIRT-VAyUqUDf3IUMJ5Vv72881nKwOYMjzPayPkjOuUXPQjNcZaUC4RlHXVIvHXqAvyA-JB3Of1dh-vrZ-wOq7UzD2V9r_15Q"}]
+ 
+2016-05-23 03:36:48.2982 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"oDL34CygXy7CZUzl+bnlTYT9xLeJ1LX0pZ26ZjUa1io=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:36:31.94","ExpiresUtc":"2016-05-30T03:36:31.94","ProtectedTicket":"GVH1__nV8YqmKkhkamOhR3WK2IJ1rAPc0T_q2H9OXUdV709D71saYUV5Vlpb3N3q10gdzNibyl71zUIZjL6n2rtDClqgEYhIowDzDqG8db7S9eWwkCkzphFssngf4tAtfv9ua_TPE55ad1d8oCHyUGxGjpzSNmwFGXNwPNKcBog42ZzjOUa44Qs50Xz2vPAMmz0NbNtXXpLMxXmf9NmplFMI-3eRLt5Fx4lMGyUvZjmQ4_D6xd_ibCQ1lmfJY8xeTdd9DexvOsDvortxOPJv1zVP5jPDlQF-jbuJEetZPjaBCikb_X83wYJ4xCPXK2-qQrtbMG2yr3SMsVDTDUoNe392mJIY-1VyQFTYH5aqRh3sVjfqOpFTZLARLnFt8z-7npdJmFlaC8Da0O4pxm_0MKXKbx84gy9Yd7nmeVavCaoX6_MpvX55PURB87Wel3PkTpVTokx2kBqfcPpr7YfxWA"}]
+ 
+2016-05-23 03:36:59.7201 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret should be sent
+ 
+2016-05-23 03:40:17.9858 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"1zY/xD8YwqZeH8HwOeX5tBzkL7+B2D4Sy6oWgNlEmIc=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:36:48.283","ExpiresUtc":"2016-05-30T03:36:48.283","ProtectedTicket":"VLuO2208eG_A-IG9rRsbqTt0Jdm-VpQ8_6h2Q0JxlVth2FdllEJKTWH-6jM6WvPScfSe5zD_Q35DHUBbxmhlajFlLufGUOG-cYuKHl9iqxeCGzTb-YcMjrGaXH-iHp0_anZ95RpamJi3fxszbqQ1i4Zt8ERcS9hTbfWDaISPpkk-SrQmd5dCKbDilCnoi9F1UoerTEa3X4-b_edWoiI5KPKKej6su1WT25rzRmZDBas9ouQ2fD8fVEOlWXHd6CTt5CDqgORVLlV3V270SN0aP0HNN0lbGIwqbV_mIkwzAJ7I2byUZI_LtupRQFI_BrXUC6r-Dmxph4yz9-kSMQuiU0xaGzykl4cFnb3Zh5w7MIr3a7TrKuNylFXGdR_xvII4_hRvmLVA182X8nkN5rBzD4R1miMqXUtNdFOk-Hp3JpaUNFcF1b_t8gT2H3SChHjGbkvJZ0QbDmshctZ3UFHkqA"}]
+ 
+2016-05-23 03:40:24.6108 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"zWDSM2sQ6BOC0krfULegjM7dgwt9qL1LWmbmm3seo4Q=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:40:17.97","ExpiresUtc":"2016-05-30T03:40:17.97","ProtectedTicket":"PYVwNzxdhwyzZ9F43CsPwk_U5Q3S9iBqO6mJu5oLW2LJMiCTYVFRv8lu4QlbLYm6JHmhwRPCcQ-NSLPufcRyx_ctJfyJKeSFKtbB_ImfNL8tTFKfLURopupHbXL8SmbSnbmh9Fc0LrcNo8rcu3eb4hhJl0-u03TygQSazj-prpwCaLFEHSxCR-9RM06kw4yGDEcsrafxGoFPG01KWDYLtRyanZ4w1_D5l_OpjJfzOKUrR1cP3m1Ob09rX1MHBZwixDgtWSL6ZwpehnT9Z6dP6aWrKgWI7f73XSOuv6qu9mL7S0jfHuZJ2HkkxayaZMIKx9F5iEFwLV1NHv6miNOZoQUBLQW9rIpvBxXviJUDQWlJzmiRasZjeEoLt5tilKwxDzboTAS7ac3V2dhRgSJk1PVxXZ2alKw5WveXu3LCUuygoHtQ08OHr2H_thHL4HhVaYTJpoW8LY5PuDUyRqOSVg"}]
+ 
+2016-05-23 03:53:21.6425 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:55:54.1426 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 03:56:08.0488 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - CountryConfigController - CountryConfigViewModel - GetByCountry() called (countryCode: AU)
+ 
+2016-05-23 03:57:40.7832 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"j/L3gARl3kbE0/qQkS0Sqe/DkuL55rSvm5WdkJCcy5s=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T03:18:19.283","ExpiresUtc":"2016-05-30T03:18:19.283","ProtectedTicket":"vTGslUEYJXPl3reiB14PC7JxsQwQnk_KB3xEhBOlN4tqBTYOri_4FgipgFcAwe3iO0xd3h62zNgbM_Ax1KbMf4u8r588rdg6-3IcQGYuRkY1ow02RpwnfnMV8R6Ec4R7S-OgscB9ieAxDns4gx_T7drsf1Vg56y8lBVNi3s_V9z_9J6wmzRK9nJUiyZenX3a4gaUsVac5rh8rnnFz6gYKCTC4Y1eUSvCnUyl2-pT4Kejg__KIheFT_qoxNN3JU-yVAkyMej9d1nXGvCDA6vId1oBiUs58R2FcTLlCnknk-v5XbPkqMvXGhg4cMeJkR5LdUWlxZQqCUrjUNmWMZsuu4RZFJ6OQtWP-r8C46nUmAVo2__541R-tJB8Gz3-KoKAFf3O94aP5JLGNYXwAr1D1q0AU3OO_xSxp0S25woIGHBJ_KdEy3RzmnYwxMac7Kyx5H2eLLgFRr7OvDnx9CGvNSmU0tVGpB2TLHsLoB_M3T0"}]
+ 
+2016-05-23 03:57:41.1895 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 04:34:44.7844 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:34:47.3000 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:38:42.2064 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:38:51.9251 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:39:14.4720 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"Tis4F1Lqe7gD7klJ6zADauKViyGkHXlPii2kioF3ah4=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T03:40:24.597","ExpiresUtc":"2016-05-30T03:40:24.597","ProtectedTicket":"N3evTZPdXbK0Mlz835F4xIgOX9jjqxBX5yVAujfN6hPwzUe0JphBkg3WAa0QV9zbRKstuZkRs6Qx-lbE0F-UwG1HPeZoceY9BFOJx9PBeTRbIDbhwuD6EYrl6RXgGPDut0TKQO17pH03-6_24pejRoaesnC_eUwXN0qObET-aNf9XUOl1bv1LIsHaKyndrLaq0azjQdHvQ8-zjlkZ3fvBJrBOOnGBK6XQuTbqx1o2aNSqG-64noGvYCkf14Eyg5ZERAvGNlrsMqSGI4rhhz_zCfsjApE7MVhGhK_R4awO8ixKy2r9UMA3L0kp4XuDszt7Pr6NiAHBGhwasIp1ydZxwRYEDdeytif9UdXn71XI7uiu9Bb1DHArmEC9GstJHx2QCUNzyHzmPxFaBcXGFclZfKljIBaZbrqxfAzDiC_BXodSfQ5QFgxae1laoeJn9phl7RoYI50Nx6qtS476eyJ1g"}]
+ 
+2016-05-23 04:40:58.5814 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:41:07.7533 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"uN0tWdHC+h2gFEWg9l9pHdiNsN+1hzpONUI9wlsh2Gk=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T04:39:14.16","ExpiresUtc":"2016-05-30T04:39:14.16","ProtectedTicket":"UVy987jkGJlegA9EP3g-jmdUlfSOVJ27A7O3x_GRt99vyaaXYMqWOQ24KGoKtZmgjefsrRoIGU9jsIcES4FCzCn8UWBaYvV6DTfDqPaWivHEOXdm2R4wdxyZ_2FcTkirT9lf4p2wexsUdmnjFb_k-W3TEmBExZrNllEhJXmBswcT8RUvVSZTDjhNwzYcuk54Bs7Qf-WyfqDWNswyufcfrf5RiTxIil22eiLsWc2X4orNCPSucE9Q8QKjwDdJ6NWKMVDCTmp8cTJ5YxBJZnOT975J2rdk-2IodfFeX1ybSOKhVXIJTD6lLSf_VcY97SMRiYZ5zbrUsBAp5B1pGprYJeiWp7P-iK2L_LzZjdtECW66QlruMCShqcxp8TnzqieqhichsejRAkWv-3lYpKvkENIHb_ExmLfVTtbaIEKOxJMY-CkNkTT1g_Mi9DHpigzzloLbcESln7ku2nKqxxyi7g"}]
+ 
+2016-05-23 04:46:54.0348 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"M6FnzvpSiyG/gUp1vTqM+K1QQDjEgA0mmKXUlD3L8So=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T03:36:14.767","ExpiresUtc":"2016-05-30T03:36:14.767","ProtectedTicket":"oGVQM5T2LxVsxexSt5ESEg7dy-6CvVRbD-jmAXAP0CgHU2tyql2zyCnb4l_2K_EI2oi7uv6k_PiDB1U4AHC-nZcN_B5mgREWVvCVDMggeRy6_rC_6RUdR7Bauy0PpSvNZDXJfi54wy36b39yfZNvjaD6HRpwOYQfCPGz7CpP46WNIpjOMR4A46o4w2HyprgQ3PDDKVxI4ZR5zRB7n5URCaud4fW1yNJNgI2-KSwqoTMsQ3bkG52XwZQWOd-Ee_X6Gd8MQi_OiztTVT8tx-YexgCU-yRUgFskp2TIlIuxUekgyC3AkPRaqvTRuNWrjhr6BZr9WakhnR1A-39Ge1X1ayVIbExaYGUj3Zchdqe88MwIXBcvduDq1c23YJAis-DPT-KwSL2DLrn22Phq2-J0JJg5E2aAZawY6pFPxyywoxXuxKnMldGCzjGeATzH7aQKqbn94K4Y-Qf_baOuqX0w0xLLjab-5joYZ8Iu0jfeIBo"}]
+ 
+2016-05-23 04:46:54.9879 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 04:51:21.0036 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 04:54:45.6444 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"T7nF7Z6QO7R/5KPmLz0qoxtxGWJGcNuJ+JrWfaMiuu8=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T01:28:23.17","ExpiresUtc":"2016-05-30T01:28:23.17","ProtectedTicket":"9KLnef1TE-FCcTkbBo9Q_25CVLt1B0YkbbcfIyku734oFhIyqx-kaaLLiRz09qDOKLpCw8youEaqCi0iN5BONZWobJtmuagqM0a3yTy0Ykke5ogtmsBrNAfo0N5A4Rf2pZdk3p1G8_NkPGz0VM_8CHjAwK1eJxOdxhjppsP6jDdhMyCGqP2HOSo1Qmzp5_dAXVHOurK8B_hu7mr9GMJyFDWIWixBK19ewzaMPfla4PnExc39gmfB5nJCMn55EScV_QDrDXUimN2aVNYydMbEdmC86TO8nJs_HKQEP7PhOkM5xxzvXe7NGAdEs-iWm2E42VPSRB-MvTwX6BKquTSHy7tV_9_N51hZ272143JSK5bwEV1ZpLuvSxZflofOd9eQhT_Kk--q79qle7pL4l9xgZEolP7Ev4NLEJ1XbHKWXhOV9-2HRp3fiSR99sIgR9TjSGArxsjcML0ATY_DwYCRF_06HOoAh1Vv2E5p-zjbjw8"}]
+ 
+2016-05-23 04:55:24.2538 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"vK74vZ5zxXbAwGYZj7hEPG9xmsv/EuEALO2NACf9PCg=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T04:54:45.63","ExpiresUtc":"2016-05-30T04:54:45.63","ProtectedTicket":"SFd0XPeUZ9t0R1XVPXAxIUSiP5DFvdTEjN090Oy3YY8SYpvu6GwAeiPNZou_bUh8B3XOVBFtTLeBM0R_5Kw4pBPiqbazVWeOriZ0v_dMRp8V1bQnMjs8kb_8GVWR773s405k7tkAnmJMhp6hdr6i4XD06pfljtano6X0WJLMxMRBaoyI-UAKRmQAka9UFjOIMosPTh3P1jLwRscqjJGO_bGj-0WAY4GQw8GLeZhnfJqoXlwIvwYL6BHWSkp6_7tddT_LSMQGjWEZYC7OrUnRS5ZBF8HWRflUU6PqXn-rFNEn1wJ8uq3rna1LJk6Bqx4J6_Rb4yROXAomrQQdci_X0IqM-f0cBFllFR7luvnmNpA4xU1Ji9vFOQO8KErsxrNwxJ7UgeG37DiCPTtboPw6eKJKdXQdh0ez-t5GjrSNzfNmbccIOggpwpngAUpYb7vkbBm5XjLQVD-UAmyrllYiStDTJknxM8RFa-RFADg7xns"}]
+ 
+2016-05-23 04:57:51.5194 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 05:02:18.2696 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:18:30.6782 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:19:01.9126 [DEBUG] - notauth:: - ApplicationOAuthProvider - Client secret is invalid
+ 
+2016-05-23 06:19:42.5688 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"ye2T0Ois0sbD06dL2X0bEp9YXKAa/3dilsnFlfMtdBs=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T04:41:07.737","ExpiresUtc":"2016-05-30T04:41:07.737","ProtectedTicket":"CtDVGhUZj7YM14AdXrOFhQJ8eWFwCJM2q60hb0b-FhUTSYnAdWRxFSbcbtvRb5EU_4ut4OnaMJfzWw5Zy1Wz5vziSl-bV4DGCIpQKQK32nKw8uy15wAoCUcYGoIqi2XZWX964MRzzoGgvofJ5sWvqCjfkSjQg1FB1-1Ei3RX-Yi1PqveRTKwKKjEioHBMjMP2wlvzmczM6sy8_fuQb5QUIUoSKhMDVAMgl9zDOreqUIZXdvw9jcgKd4Xckr5N2P-hLafOmFLoZcHWozJq_QhpPJXtPTA8jMwvjGM6ZUe-Dy_wcLGYDkrIpSc_WyXeAJG3ogiwiUb8pJO0-6TEX4mMk4ieRCcTM8SJo556H4Wcp14VVMWLUMe4AMyDmqF4tw9BaWSaIi3bfqc7_2wEcCh60cVpiCk_1Vr7c9IIIZf_vw7C5__kApF_MekJbye9RqR1oemD4Lg7c3mSYS0wVsqIw"}]
+ 
+2016-05-23 06:20:35.2095 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"tXwyWs20ZF5VdGDyAxeUn4bSJbKFBGMO3aXKnR3iRS4=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:19:42.537","ExpiresUtc":"2016-05-30T06:19:42.537","ProtectedTicket":"kkUfct1fx59iF_5Po0ZE-qZGiad8j7W3a9OV8TmIvFSoKDLvJJ4FLOxxfn3mK92p6FKMjDsymYwn2UlA-FUJZOSptUrVGwnCLK8N65EpbV3oZeMWjTncNs5KMYUHRilG70x6vvFMTz6LTdSl2wjCQCt4IkKK1auEejRYX9RQz9LokRLt4VDgZ4PCr0AgKT5JoWR3nPlU0hK68uFCniwgvsME5_eQpyTDo10TY0KRV6MjCrBYD27b_6qwmr7KAqo1QvdBVX9OdfpWz3zhclZaJ5gAIngvZb3QrugzPp1koWJbNl16BsbJtP7GLfcFKAbffdKMMlAsEwR5PWNIVYuIWPXGmM0B1DnmQBBRR9Pg2rQUjmnIkiPK9-Wv268A5J9AohMxoVhRUUq8pMiDE8L4Bscay989Wr6A9LiqW9yUzJFqZGtj3QBzRpFD-XbhUvf29TI1o7XWbkUjp-VuvhqXWw"}]
+ 
+2016-05-23 06:21:26.3658 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"5THxGXYzNJpXzhFzkr6Mzb6ll4huPVvWefI5r2szjkE=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:20:35.21","ExpiresUtc":"2016-05-30T06:20:35.21","ProtectedTicket":"K48PC2tuRYv-7FPkt2UhSUCD55rojEpGEqYbQWE2a7qur4KXnKpV88FxvLzgsqRzn1XcRwHHBvOOk-UXHSNw-3S3Xu56De1Hpt5LNCtrEP_pm-AmTzIVD159ai7ednjjBpmW6D-QfJqObToLAoEeyzhwuF9wQEjuBd4JMcQHiPVtcKpzNqnemuCpvczH0sILZANVFgXd5ajCwUqDgkK3aMa6f0tjOdDxgn73gCj5ABg1D9FsCZcxBBhOR8fo5la8L7UmLRI2HL2IgxaT-6w9XdI5UUyVGYkg-fXeQ6vzouB1D0ZExTTdp9hH1QCuSrF7l4gP0hG9p1A2ROCAP8pk4A-z8MnA8o0Dz8iCD2gfZ3gTvTYPHA1Dr3suD_Gq8CI-gl_F7tE9etn8dHjLSEEt83ftYShAhm_Kjj3oe0HC2jctlRv8asujDQbwYTJ7CIgxdv7M3_RApnBPdqCbQj413Q"}]
+ 
+2016-05-23 06:21:28.3814 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:21:59.1314 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"y+L77C7qvN7aMkjXg7pfjV8lU0TRX/VVLHpjBOQEjbw=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:21:26.35","ExpiresUtc":"2016-05-30T06:21:26.35","ProtectedTicket":"Y_dgC3cctxtKL_j9inIxV55GpfX7cIW1-nJVLZPKLc1J_5HaAWYbBL1oIAn9TwWQNXlPADVK2nxMf2Ja9yfN9ajg5NjH3fXmVpyK4Sv3zkiBqqBaE-3MSKMixg0oYD1MYfCh3FfQ5STSh6CYp8ZBILB_r287IqaX1E0zuFjizkcOMRfFJKDZ2HZzNZLMyKfAKRlXjp9QCdL6XqDQCk6lNf7Xgtbt2YeF4LsN2ppXjQBFlTX_YIiOxc5W-i5SPbZ59vwkVeA3FNx09JkxEMjY6ImLH81pydfJnOF7uXwYkQvNxTBp1mFcxhbY5MqQ9k_2E_Fk3-5rcpW7CGIzogn2covXZF0HGni3-bfxG9_VkVArRS_JSEJChetJFZFNVoXECow5srj0P_q1LK6NA00bIbfXwo7ZumzQFB0o8h6a7IQN-jpK8d4IAG9R-_Z4Ij8rJPh54uMLSxNXMm_6kP1rPQ"}]
+ 
+2016-05-23 06:23:38.2721 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:23:53.6783 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"oux9H2YO9NhwlMHdm+GqtdY7LVw+qezwJMVKlBh0+Ks=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:21:59.13","ExpiresUtc":"2016-05-30T06:21:59.13","ProtectedTicket":"_WQ_Xi219AfMh8AYzP9Ps2FMar9ZPbjy4kAMfNzqZYI3O4CGkWeXY2kFTEvYmxwno3QMQkOOUA3JscXlsGQVbXsZQGyJ_Z8mVz0pDw7rDKYY58qzFdC_05zn-0eW3-03bgaMYHTdZAsAW-JxAcGlxUJ2eF-n4uVibjpmjWampXOHAbx5hOCMmI3SKf_mvFA4E7_6vHsQzXoI5lqNWLh2kfAokOHfg96upNrGn7ExYgL_S_WkfOQ8IQQ6ex-KU7T6gGYLXoSzpSnzpofEooKB3LOnBpIP3Aa0__Af5XYeXveC-T3sAYLTlLRcRqcomt5puVEH1U_6i1O52ilt-wyYXA0fWsPaSOo4VhIzEoeLtbyuDnSmaR7Nhc2YNTW5RlLbYTzithGiRBtv6pAw837L732U17uxuatNFma3LoUVIP4uEaJr7fVv2k3ASbYfxQHOkYG9QWzppTlEUt0egbXJFw"}]
+ 
+2016-05-23 06:25:11.7565 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"G0bx/X4ZVgnjxUcnAD8eWmHmrZvmL0DKhWfp/sSs7cE=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:23:53.663","ExpiresUtc":"2016-05-30T06:23:53.663","ProtectedTicket":"fVujKwQMwqwB6Ggmki_ipZY9XM31hi8oEvfMYQSc4-R38iJghEVgecXLIBKKT-zO2wLcn1Ot1r7Drss0F4XtIgz4WkeDJYXTDs5sQLDhnVBYr2XKpZfPK8qYeaq7GUFxrEh8GOaop_ZTba0-mJFjRKSW1C4SjE8gnwOSnMXBuFPqWI_1BjiBo9kmqt0BfXxsizrFRK2XVmLrXryTf9lGflkyBxsm56FafUAd1MGQAsmx1BhnvqV9xDu5RlYIDK7IZFoGlGoCMa7Om3SNgxYsqW_9C_Xl7Atxmv71Q7LrxUpzZ8fkUVaKz0tKqkYl2cAeUoPR1Du1HIN5iAO-92z4KnzXHGOrfL0XlH0r0hR9fcA2ekFGnzbPhypnn5ebm-v0XNlvRPLapN78tS0BNcua7xU6GDcXg3boyRwV4KegnbtZsZ5TlzvoXl3RiNgfrNSLoI3OJgMpsGcRT_Ru-qF0fw"}]
+ 
+2016-05-23 06:25:27.6628 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:27:22.6628 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"OFHuY/1vAwmRfL+6IUlh8+awD2a3IRHnfavJXG4Rtco=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:25:11.74","ExpiresUtc":"2016-05-30T06:25:11.74","ProtectedTicket":"u2TX1hnwIuisHtBSXJyhLmfmB8JAbVy4WKsjhrq84IVOYhqry7Q59vXkdWlCOKbKHf-Ta5R1tttdb-wpWyPz5iuQT9B6ba59aE0dAOKDTU-ZcqB02tzzjbuoREUU7CXiGuv7I1lrGJKbyASpA9zvG3_5i4xM5AwXqSy0YcTqTe3YrZMp1jbt7wtfUAXD1DM9eJ8kX1HCQtW2M2TrT4yNuaRz1TVKSNbEa6T9YX0MB_dxaARywW-D-5utmd5wKYBpAxvcRXCylWVNp2dXS5hj-e1wsTBWiSzXpNE_-572mvF2jJ24kC-DY3F00Kju_lcjjsOFBWL7rUN8sSp8RMQUXmlSpCX7xHKE3YSAEm8nt-GMrWNLsepXAFH3eZ4MQcsQ3u2heQvJC5SXu9T2ZeFT6SsWKS1uK819JvSGvTVGk31-Le2vjl3CElXdUzUPBZ6cL58ewNMBtXTYLrDMWs6qHQ"}]
+ 
+2016-05-23 06:28:17.8503 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"8alEe1ATKawED9Ngr55X8GiEQ3zRUyKrow1IIrF2Jj4=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:27:22.647","ExpiresUtc":"2016-05-30T06:27:22.647","ProtectedTicket":"NoOo6LpZkA3fEhGiR2iXZgFM0sfed_4oWG0TczfPhX6_esnJvaq4uhOsUziyRrTrCD1RtCWckL1nk_t_PKNbKxMoItKLaBlGrChMy28Vd-O-mm_RZr6g3g5ikp7GIrfjlH-G91UOWWtMcs_iuJ6AVfmyN9bA9dIhgDoSjujfnroxFNcThSYiRdsDkgaGIDOYeB7Zyw2naQ-VeTIcpWM0kA2oNvWPGwjw5172zJnG8XkDT3i-FjJ-SFVQxmt62Ur8LPJQAZFU5AiXcyuGtBvqXcvk9GSH-IECbxSWgq35D3k5fI8o2n9S5YaRUPNNNuviVd8-odeWZzG0T_UOCQsQOwG50FE68ICz_58tDO2I-UOANJvwXt_4XxU9X5iaq1qmLOxYwhLDoBdP69XpEFLEK_NccC043rSvSZ8DMJVU_7s61HUMPcOIklsVm_jxC_9vTiHa3_rgJJ7TmJDAP0HWcA"}]
+ 
+2016-05-23 06:30:27.6786 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"wSiiiLg9KnTKkev1/NJ8IRpJ5e26Qt5BOCssoXZErYI=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:28:17.85","ExpiresUtc":"2016-05-30T06:28:17.85","ProtectedTicket":"gB4GNnr9ci548P66eSC27y-E4vt_mKhSXdZAY5bzQwdGTaIPy-D2O5QIPTDXUjbaT30NPqV_UC-k-Ta0oSbPrwSsIrqAJK87JKHhbGpXCvukIv2maZarLxR8pyz4d80uHVyEtJaErnszLHkmTHDc0d8lC5y5O-goD5cJPg9DdC-i_1Y6sY8Dt7Y-cvloqdHh4ecn8nHXMRJoqBB3aodnL-Rc_u1Rk8eoXnd0AFBexJS75NTuinETjUsHI95B6rhW35-2j9At14ViHmHOE101fClQaJldmpvI_234FfWbY5fdTffXIU2brme6FHL3YCE8HZNLEyOKuF1nx_ldRmlOJPjMSnGqvVuYPi7FqMAP8nQbWFuYCqxX-H5XsWH0Ua7OZ_4GaFo-mp8RQJ_lk_Ig1oVx2JZ5EZ2upfJRGdWqSxpxT57gyXq4g1aFt-YMAGr5kyM_tpugWC4ykoeQ8mU2xA"}]
+ 
+2016-05-23 06:31:03.0692 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:37:17.6475 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:38:51.3819 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:42:09.1945 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:45:32.0071 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:46:34.6165 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 06:47:45.3197 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 07:01:19.3670 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 21:39:10.2065 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"W9fuZ2c/6ZGmSmZXlWSZ0cRHCqmt8K21JSsefLedFEI=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T07:01:19.197","ExpiresUtc":"2016-05-30T07:01:19.197","ProtectedTicket":"eeDWHnTypceF9zUgwOnGrhQkxMzqvkerWrtMmWgZSmudA6U13UeBoN8MN6JGSSw0VbBp2scEzXTECh6MY6WLaNdpiTVnz3hBLsDxbP5qGnkj0OcfQVYTg7PHRTXRqdk8K9zPoAU5qi435bzNxN3iRr1GKjY2ZgsBrG3klmYlGVjhmrGi18mSZFnx1OmyQX9wUiTHDftxoHPvaKFLylC1M-CfzJmoeEB2MZ70oCVAL58q7zB83nV6Xhw2r4ya2dKKX5jSKcqZi-Ezzi1iOZLjf66UD5lXZw8RHwhGBFvGgwtH-ypp_mAt83jGay0Lx42bpk-ppqsmSTE-M7Oanq_T0XzO9pkl1JhfQIhhHiuqx7mF5dUWOHzyJnjvgez2lSRzknLjwzVNbNl24ePEDkAA50d367gFhx1QTkfZvKOUG35cP6bWZMMPJ3bpaguneHkwhfkxO6UOKR1B4jxDM1bWsVc5AyWkQGeQs3WuFKpcEH4"}]
+ 
+2016-05-23 21:39:15.6127 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 21:40:12.4877 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchRepository - Error searching for data that match searchterm "Hales" (page: 1, itemsPerPage: 15)
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:40:12.4877 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchController - Error searching based on search term "Hales" (page: 1, itemsPerPage: 15, resultType: , countryCode: 
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:40:12.4877 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchRepository - Error searching for data that match searchterm "Hales" (page: 1, itemsPerPage: 15)
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:40:12.4877 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchController - Error searching based on search term "Hales" (page: 1, itemsPerPage: 15, resultType: Member, countryCode: 
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:41:31.0347 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchRepository - Error searching for data that match searchterm "Sydney" (page: 1, itemsPerPage: 15)
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:41:31.0503 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchController - Error searching based on search term "Sydney" (page: 1, itemsPerPage: 15, resultType: , countryCode: 
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:41:31.2222 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchRepository - Error searching for data that match searchterm "Sydney" (page: 1, itemsPerPage: 15)
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 21:41:31.2222 [ERROR] - auth:Bearer:lucas.bento@ubteam.com - SearchController - Error searching based on search term "Sydney" (page: 1, itemsPerPage: 15, resultType: Member, countryCode: 
+ System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+2016-05-23 22:01:08.6134 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"QU+Q5m0g0G1L8LnKcMM4y20xiMW7ihxMMSSmBZRlQso=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T22:01:05.88","ExpiresUtc":"2016-05-30T22:01:05.88","ProtectedTicket":"AzQhaHdBlwBfCHNJogAnl5kvl_Y7WvXPGnNsaQ9uDDarHmb0HchXPNpKtG4qAZl_XZE7kaYxF3yJwk5ewvIYLY1tXVHFXiAzPkRvHklnqjk_ETGPaOY1SiricQ19UKXeXLqEjFfArlMVI2cVzAWgZLBisVhgmpQU6Pb-v_NScb6hKcySvI7IUWCFn94Nb6oxkp_V15Xc4rLXMFF5zuT1j7WpNQ6bMXfMmlQGEuvAE8n5W09eNxqRIOSzhACbl7cn3ZuBoxbqfAlOJ3AL90-T_kSQ0CzL8ymT0YeRz0WVMh2uNFGte7rchUqxZ6mnSbrslAgDt8hWu9i0QZL0XsRCxijvHRc0V6o5nufydmkz1-a7jDY7pv_8Tu9Spu0inyDqsXBXzAG4kcUIR_hM6uk6t6V_7Km-l1t7uzW4yljXyI_6I4Uh3OTGj1Wd1ve-cCJyBC6d-bSOOGKvq2eSaV5yDRWRccRPriyMeVGcf5rG2nA"}]
+ 
+2016-05-23 22:01:13.5509 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 22:06:46.9729 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"nXb+mNTE5SXhEhgsOkNcXhcU2BRjXNiGTrDphaCKCas=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T06:30:27.68","ExpiresUtc":"2016-05-30T06:30:27.68","ProtectedTicket":"MuDLNnBW6eQ1Y4-p-Vg118D_crrMBFi7tIK4uzdTARW0fDxhUraltZBJqkfl6iUeQ7y4k8X2zc_RbwQax1ZI2THCJRXXng-Q2zfZ5sIrtrddLVhnSUX7NH8crfT1RB0f39qPAxWrYT76PWC2naKx_G--MMjVcbMFuv-3P4bQzlaIha5vJkrnIvkNsCmIs2kvpN8UM9GF7tYPSb4gQXSOm808Pzx1R6eyx_VwLNGMngXa61RHZKUWpplII9vrj5ZGmwW5ErfeGovbevzajycQr3Sf9P8mnEgE17ST9ZcAYcU_9Etx5bpRTFcvXscawfyAd2Q0-zdS8AKvKeZyfDnmFu-9xpOCsFhQng4M5fudppXT8J37vCc_iRUZbBKMU1ITES3SX7Sy1bHa4LUqFd8mcUGmRTzQZMxUYz30dEljg0xNBWQDhMb7G1gbAnxYFyiSvLNvp8ElRkI-k1lblT_Jfw"}]
+ 
+2016-05-23 22:22:00.1297 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"I/jyjC0grFZDEku3lt30rGiC2wx7W63cgmssWLtxtdA=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T22:06:46.973","ExpiresUtc":"2016-05-30T22:06:46.973","ProtectedTicket":"CxQ747td5IBEHGz-zit4z4KfIF8aiCEdVCEesD7G28DFuIs59bHqYSVms3ukEfWIK1Ed1IOKnzQ8t4vAo-U_k3WGQEy5pbsnypPWJF-7ffudQh0ykd_v1Hu-Rqb16K5GS1f3jsmSg2qSmzdidPipUycgSHEr7C2S4TXffzgulbx6u7Tyj6ttP6llOhGtupfdYtnLql9ygbK9egYwyjQLAQ8iJFrsFjwSJ5T5uinOhUQXExIBOpJmAaiIbN8ZKt35yZARdiW2oNyuHXHVr3zIbFHQw8KjgbA2NlWIsDxdpSrdel_KdqZfdFD2Um9a1NNtvOZkl4RCsXyYEvh-X1G19WAunAJOoFvQricOJ2jY5DJkBai8Ok8NVNM6ivLy6rMlUfyQhUNTmg1XI7LHHNhvfjVYy8zfyE9dB3MHTVCF5Rc8064EUQBMOUvwPjkEODgwu2kRcNWZL_TNTWFPz1UtvQ"}]
+ 
+2016-05-23 22:22:01.2546 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":null,"PhoneNumber":null,"MobileNumber":null,"EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"sample string 10","DateOfBirth":null,"Notes":null,"ProductCode":"11-118-11282"}]
+ 
+2016-05-23 22:22:01.3172 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:bde93024-c45a-42bb-b546-d015bdfecd28
+Error Number:8178,State:1,Class:16
+2016-05-23 22:22:01.3484 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:bde93024-c45a-42bb-b546-d015bdfecd28
+Error Number:8178,State:1,Class:16
+2016-05-23 22:24:22.3485 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"9/22QiFcVBBoWtlaryrANGDNwINTYsfyXmqwrXVv+1k=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T22:22:00.113","ExpiresUtc":"2016-05-30T22:22:00.113","ProtectedTicket":"W3L_imU53nZ83kZcqSS1GLMZj7IVpVcGc1QfzSJLLb5Th_yP89Y-LiVqjfbyn1ck7_d7899dlUQOht6sYnz0au6N87V9W2iXrJNqEYc3vPZG7Tp5FCwmO8GDwwQ9pzbLg82p67KLeHuKIIrORIf81VLhD85SWisxFm3maRa42NSYsLluPCES1y3G6oUFzTdRTL2PAmiWPYRes38L1o3K5mGnS2_RyzYuwpgYq1dNTTTob5XpmtSnKgG1ipePOO6i-EmLLdZgcvshuAtCor8aNxt_AdElo-RTY7QFdrY2OEHSXYrim6-7Npda8zQZqKhy0JNlId90JfUT6iSGhH1J4HHTWMsb98uvKIP0K0csvnL-UalaSRA15Q2rEGdX_TraRTacK1lzbgNjLQopcKBDV4GRkFJ_t557zZV_iDZlYtjN6G0a6vX2UAh4UAWK1uQ0gSmg7aOOoKNyA66En6wwcw"}]
+ 
+2016-05-23 22:36:38.4270 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"Qyn+tzlGL4s7+qfo9dduKm2KCFaH+AIOXcfyU3hGkXA=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T22:24:22.35","ExpiresUtc":"2016-05-30T22:24:22.35","ProtectedTicket":"S0yUJ6rys2DV5PuiVBoylyzKBPmDOOhkDl8HwwhpD-tYLActFFTJ3hI-7LNKpcT9nTwYPSM6CFXT6_WfoXKdLW2MqdXAdtQmK-O2rfaiJbPh2LekB48FhE9ebT8Fy7SmwxpibO1dZBNXXk6cIynoEBo3EbljSvU-ORDYekzsq-dP7T8lfvJYhZO3ApuHRmQPIt-q3ZIt3wF75o01LViylIN1QFP3eVQcJ91gSln_lqfDgDkkhN-pjJeG6B4pJHjSVUk_dGLwCup5XiwRbw5N6eATB-XS1KHN-d9qPAKMFf1mJmSoCuj74NkOM6luVXA28XIQ--Lsu1gD0DAerQmhAbUxBjsxiuWXZigt-FACF1eK0RZgQjh_RILc_KqNEvBdsqEh9sgSeTMGnKLB3BJKNvPIhN8P_8V1ZSe_S3JafG2R069zoR8vDDdWn2S0dOCVLCE219BrkleMMHxTb0sLTw"}]
+ 
+2016-05-23 22:36:39.4739 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":null,"PhoneNumber":null,"MobileNumber":null,"EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":null,"ProductCode":"11-118-11282"}]
+ 
+2016-05-23 22:36:39.4739 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:81bf259b-0ed3-4a0b-8075-fe4b13be701b
+Error Number:8178,State:1,Class:16
+2016-05-23 22:36:39.4739 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:81bf259b-0ed3-4a0b-8075-fe4b13be701b
+Error Number:8178,State:1,Class:16
+2016-05-23 22:38:52.0833 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"TpM7BMx1bD6OlxDASNqkBPDL82JUJCNvC8sUG2X7UiI=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T22:36:38.427","ExpiresUtc":"2016-05-30T22:36:38.427","ProtectedTicket":"XLZw7UAK3ngCHHzLG8RWZDzukfLJb1DVfBwgMwcJzp7Hs_lGGtgclRG75zUv0cJmth5hGA-nLzotlaxZy-LwXdy5Zm4xPtVVIg4r0e5q01XapSb5OJojOk_xV-p4S9yhiPpToSx41TXNOyn2D5Sfl0YBiJ2m-tKxFgHf79GHQg7oaqPDXZa8ypLHMWJGuZ8EPDzezobzHPX4snldqR4kbTKGk5kO9tBTO_e6CmkbhibTxlD1cGezWADxDYOjhPH3ozS43gPhjH5bn1o2RHHdlaXD9ZA6-rQEDMpxAT39vkNcN6t2DlmKm37G2hceslFjG2Z6bswMEqwBQKjvNBJB9zmp7wS_fOY7lKWRwq7Zli_4OQI6xAwQIrpqkFZrpqQ0fILC-1Dw6tDjblsuKcdYO6EaPIIVlSri3CVDTaY5cWBxmGCd9c_8t_S1LvG2ghTwlkBdiAcxxniaRP2qU47rUQ"}]
+ 
+2016-05-23 22:38:53.1146 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"8097","FirstName":"1.5au test","LastName":"Test","Gender":null,"PhoneNumber":null,"MobileNumber":null,"EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":null,"ProductCode":"11-118-11282"}]
+ 
+2016-05-23 22:38:53.1146 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:81bf259b-0ed3-4a0b-8075-fe4b13be701b
+Error Number:8178,State:1,Class:16
+2016-05-23 22:38:53.1146 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@gender', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:81bf259b-0ed3-4a0b-8075-fe4b13be701b
+Error Number:8178,State:1,Class:16
+2016-05-23 22:53:50.4744 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"Jyj9RjVKmfQ/H5ElJkeoGTG8HRcEp/lPdd80kcN4unI=","Subject":"lucas.bento@ubteam.com","ClientId":null,"IssuedUtc":"2016-05-23T22:01:08.597","ExpiresUtc":"2016-05-30T22:01:08.597","ProtectedTicket":"gZ9IUAxaVks371smWBf4XidvvMFbc_kIJ5lhwvjxjxqm5hVhjpeXzdmvn15Q8iiI20qk-x0WAWap79_Zynn1byj7CCPUXogtKbGIW1oH7roFd9DKN9wHVh26pV-bFzQiIcv3ygZ800f5H7hpsRqiT_z1gsexq7rG5s7PqpRFlZ29FRM7A7MHO6I7huso4B6-brtpP9sJfWLNjAIUwh-Y02ewPuJEyYtAUrqiEVcCXw9_rlUq6HYGsFS0QNM3vAYvrZd-3pjHqwAa48ZNfxrwmjyC6M8lqyv96GhCOVFBGRF2fTCbkU8AVCWQX3FOrv7ldRy0fPDLci7yyS7RnD1cL1h2-Ocd0RUzjvdj2CqzLqu8dscpxu6U-c-951ditbpHWJ70ZKIFEfOxH2380wonh20KvDPVU_fy9hPGyqtFq_3i-veEXQenyH3KBw1nXhJCP6Sj_FvAxVqiuT7UW1C0pkwkUTnHpH9WhLQfTQj3f6g"}]
+ 
+2016-05-23 22:53:50.7713 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 23:11:27.7718 [TRACE] - auth:Bearer:lucas.bento@ubteam.com - UBTController - UsersController GetCurrent() called (User.Identity.Name = lucas.bento@ubteam.com)
+ 
+2016-05-23 23:14:18.0844 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"zUWiX1gbMRgAjFoGuEVBuNTcaleCL+6abg7HvZNzYSU=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T03:57:40.767","ExpiresUtc":"2016-05-30T03:57:40.767","ProtectedTicket":"NP9uVInlh3UWToE27sVxKHc_ABZKYolJMg25IQ9RjEaK5O358RY3TVBAk7_S2YBx0rvGHVdJzmqrMeuYZuUo4VUV0rMUQOlcFeJ3968TvzUDMtMJ7-F4u8uVswXzIzyf3HWvTulUQb35bGAu8RUtR6u0a8HVZY3WbknoTurm8MRm-jCMPaXK9VmV02wSluSRITnKcDJuCaaoQSjOUaI4dtiT4hE0KYCnqH6IYNHElbYRij_35UTtyi2_YJibkJB5FU4d_GjkRKSl0cPyBV2kVEArKbNjKtf-3Cxamm9LOFho2x7EJUWI4ltM60oREXzKFc76I9xD9gXfvdTIX2l7_TTx45Ec7PI7uZ1R9A0Imx-3WV62o_FRxUIvxnVNcZJYWSrdVHliccrcQMvnrzFY0g5jBlA4l_bwTCRA5CZqgIRD7TfE-eDKuQDvRBRUFNPyAyv-9FRvZQ8ttfrxrR3RpE2hF6E8l9VXH1TGZzRM8eo"}]
+ 
+2016-05-23 23:14:18.3344 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 23:21:27.3815 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"YaEP9y7uzgiLjpDcwokHnUH+ISmI6nyyGrFLAAEuwBM=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T22:38:52.067","ExpiresUtc":"2016-05-30T22:38:52.067","ProtectedTicket":"IPaJ3_Z7sW9qCrWhz7XpsGignfCx71anhj-j9BdpwJD3wk5H_JbYED5isC2VdnjW2AW0fe407Z1dKeYa18BqCGreSHWz6QfItT4gHrrLpdd_FcuweVFNOOVNYzVuhUCI6Y3eNilurlPRcBabk1oX8Zxzxp5IRBBuaBljZgPzyd_EjvFTpaRkULZmW8BuifC_E4A-HQt36omFLDimG9Mekj5UH33zI4zLo3NiXYgp1Ak8s1_lBiS8NSiJmiHcSK7F8rhDNmtM8NBBgcaambjpEpmLtMKFKac_1LP9MzH4mZCEXuelRI11dN-7UMsEfzFsibk8RnWMX2Nw9iCMm7MlOU8TnBvcmZA-yo7LLLnw5oQoMsJ6eDy_Yzv-eggIeAmcDpI3HWoPiNOh3Jonvv2nWLyTlYNfZpN7OeOYQEoUaRSjt68HaKaXG-b4e-usOhZW_XcxRCYQvnctyNxxdnThdA"}]
+ 
+2016-05-23 23:21:27.4596 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 23:21:28.4284 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":null,"FirstName":null,"LastName":null,"Gender":null,"PhoneNumber":null,"MobileNumber":null,"EmailAddress":null,"Address":null,"Locality":null,"Country":null,"DateOfBirth":null,"Notes":null,"ProductCode":null}]
+ 
+2016-05-23 23:21:28.4284 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4000),@first_name nvarchar(4000),@last_nam' expects the parameter '@account_id', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:21:28.4284 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4000),@first_name nvarchar(4000),@last_nam' expects the parameter '@account_id', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:22:16.9909 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"nOPhteppyrKyyDI8+kmpu2Mq33VWZnIYMdrjoj3a344=","Subject":"TestRegionalSubscriber","ClientId":null,"IssuedUtc":"2016-05-23T23:14:18.07","ExpiresUtc":"2016-05-30T23:14:18.07","ProtectedTicket":"MPliHiHPS2LoEITdgOUUqQyAKR_3KWTzl0G7OFRs4NrpCzQ3cqPbAruRiIRtqMmLChZF11plczCtjZH5zdzMFsfbBm47VWzFyRMvgKbBRrnjnXq3DQ6AVWnI8uF9dxcIf0y0ZJwrYLKAgs8cBIjWAR9Wwj74VEJlmK8GGmCWXeFO-XN6AGUPfco7d-JH_5kDFn0xrY9-u1a9eeU-0Jr2yjwqFDvw9cXuvkQAEQa_-Z9iGDUPffsFQiJptFeQrJ5_3hWaaJS-Gtk2IhM7wVXVazM6DZzCHnAQW5RXkWJ1bDPVAenjOQGN57eaQfMtdFqDtZmTflOnLn9yqG6obwuWu0q9Vs6LweWB_Df1XBjxWX_Xd9KYfj9CnLLwnIPVUOgAngj0-tIzTWPVlJbwltAHD0qZgFlTOItpykchizSCmQ1OD46zarbRDv-0MQ_QBlJpWxJHu2S7QNHQGsIIXwKqVnNGiEh86RqOyIls1F7HDuw"}]
+ 
+2016-05-23 23:22:17.4284 [TRACE] - auth:Bearer:TestRegionalSubscriber - UBTController - UsersController GetCurrent() called (User.Identity.Name = TestRegionalSubscriber)
+ 
+2016-05-23 23:22:59.4440 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"FzYCJRN5Kv8wCjiv54qYKyeRI1Zm+Npuu/WKeEm+gcU=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:21:27.383","ExpiresUtc":"2016-05-30T23:21:27.383","ProtectedTicket":"64W9MNXXpXLp3Ugs4UXFZWT2b26VfR9Pgy06mifEJj8rEgYruLH7uitoLRy5AHXsUgpY7Cy5J6UxuodbaFcgNh2LC6YhAMuNwnvW1XAyQhHZT-Xa_915sNJZuZcZYBphVwflA29IGPcfVchzEfefhwvaxH3H8AAwDLjI3KECQ7wlu8LBUfu4VWnbgH0iWM-ZUSCRpJGUncfw4qEFnpljaK5Eb5sjzMC8Heh2ocnHh_E-nAdnumAg1_G7RmmEc0Xgdb8ufc0Kfrg2vu6NgCOEbOKVftFSADtfcQmRm4MhUjqXqLTt4Fq5Vj_D43dBEytaPqFSMVgWCitZm6tb36stMZbEiltO_k-UpsNjLYRdW3mlKu5bYvZqe6Guj01ArBc8sUtt7VRQ_bRn-fnJ6cWfdrjFnwjLk59cxv3BkbgqfhYp4gTeUo6gkMIKtbHbViQqpbxl_n9dNr6BkZcAnPLINQ"}]
+ 
+2016-05-23 23:23:00.4909 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:23:00.5065 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:23:00.5065 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:23:35.7097 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"lDHQvpfXnuHs3+AkAhf1i/aPC3HrteGKYFohG/XUvbs=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:22:59.427","ExpiresUtc":"2016-05-30T23:22:59.427","ProtectedTicket":"wPuelJ7uMGeVnt63IpfkuBrB1CbHRTywDJymZ5UUsNi4RIQ8t87zM_ZJtOSPJRlqGi-8h37ruliK-oki_Y98nazp2noQGCAm96tJskmtbh3ko9EZmV76Wggqk02_iHdbXmrSrb6Bkxw-cBu362xcnY3wXEIseRps0eX5NAQzupkz8dM3PFEmneiCc48joZvPjtCuWa-Ly-nbu-jaD_E0oos_4qg9IhxQCRpylRNf2BhBreE8nHkSV28-5JXdiVEaPGpIRNWDgouT7MoxVQb9dcoDAsn5GsY8VPS0s6KF9IbZmSI_ANbQ1gufLq4jhPrWfr85OULb70mNvLBMEozVfo1sWZIaDIAFldVvpsqCOwTUhX-m-AeALOp4J9gnrxXFGqUSM5BOjQwB-ogBpd_fWcM_QMKVRJNNfXmy10YMwGK1a_XXENb9Ntjj8MtlDy18kksKXCd4AcvPA9J0581uZA"}]
+ 
+2016-05-23 23:23:36.8659 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:23:36.8659 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:23:36.8659 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:25:22.9441 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"TQaeFFCE5jDMFQMYuP7FmwgigprP5dnaf8iq1KPkVek=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:23:35.693","ExpiresUtc":"2016-05-30T23:23:35.693","ProtectedTicket":"95UfPQ3TenhZ_6wQjl5uIZUdGM_LMIaDX26VYrwkSwg7FDwkBycpi9HoVmcMLwpq0uUJAAsjmDVnaCWH0uxP8wJwC3z9lYp_BiPIMV9NjFTf1AeKnr0GxLvuCNuyXpXG4XGKhYrsI_DY0UiDvofRP288fLpS9ZxoCZ0oR1T0JdW2eBnPIlSmKM99hrcC0_GC_8AS1RcTfa-8MbHOen5Itabb8C31FRDb500sUq-qUo4aQ7AweJHsjyrFJ66Vo3bJR7MyZ0bWA1CsD3_-_PNhkHU48qzuHKXn6s74EgIDMNb7lerfrgpZF2GQNtDQ0fjTAHGT2gij5ZEuYt01q-HQSExyPGQbvOks73RDzphXIFHsp099YMbOnVFB3pI79h_pxiqdk1HXWwNoMainr0la4XDLhrjFnWW8iZ4a26XMt0e7zV7nAGALctXoIUoQ83dNDRM5hxM-mZhk8T3LAVRqyA"}]
+ 
+2016-05-23 23:25:23.9441 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:25:23.9597 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:a22443a3-4710-4c1a-9c87-edc0d570f2e8
+Error Number:8178,State:1,Class:16
+2016-05-23 23:25:23.9597 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:a22443a3-4710-4c1a-9c87-edc0d570f2e8
+Error Number:8178,State:1,Class:16
+2016-05-23 23:26:39.2254 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"bFscgfPmn/HCf9VYwSP54K9n0AMgb2o32IU7JfhwHOg=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:25:22.93","ExpiresUtc":"2016-05-30T23:25:22.93","ProtectedTicket":"SStdx4zgUHN48hpt4ks5EGi6KognWbTiZPfBbjc0EziNFmL8u60mg_o1V7DRJfZ8e917rfXo7JBiH2SyZGW2u-BhGpodHHow8Nn4XJ5iqSJI9MnYI1YyTTiOdygP0UOKTXwkG9gy9cdlcR6DO2wQwhfqBIiVp5tr2Le2gSLZgIyW-22G2qldwE93iPvOYvBpx3BpYqh2SdqMY2XKZJA8DdKkahGCEYSSlndCFPZMlA5jqLNZA8bBjvitVHkj1MLG9W-JoYlQn8t9olmCEbx2ieDPI85A6KBfp8BjAyE3n89f7a0-NchcXclWgXdRijbwBmLEmrSWzFe9I8TO3YL_4FxPgJCtzCRhloJy-CMQ_cyuQcgIUt9t2CZd0snq1Qka1B8SP7tREBdzYJyt59yNU593MLXL_qtdnmfKCYnWWNbMifeHn7ciwbiNXHD4ZjhyFVR1W6T2-CWTFarAFFWWeA"}]
+ 
+2016-05-23 23:26:40.2410 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:26:40.2410 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:0b07db81-bc41-455a-92a1-dbd9362098a2
+Error Number:8178,State:1,Class:16
+2016-05-23 23:26:40.2410 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:0b07db81-bc41-455a-92a1-dbd9362098a2
+Error Number:8178,State:1,Class:16
+2016-05-23 23:27:29.6629 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"IREgwLaTLB458BeWWn686/enWLG7XO9TF9WhcVENu7E=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:26:39.227","ExpiresUtc":"2016-05-30T23:26:39.227","ProtectedTicket":"c7yWq18Iv2g0DR4WtrnEkQ-XFHzQnlUp2Uf2u9tg3BRX9794EeUVJdSZVt6VNFKLSj46q40ssaCtxsT-XZR_gPrzg3z4lu7ipPT55xhbsBNbki4Rg7ea3J4C5RjRfysAlw_K-9MH1TAObRS2Hw2UFvlnXbB4pMVP1hFZWCky28itRnifZxukzs3_zH4xJblmJ-p51ku-1xFoKN_w5aBDUEp_H7kj6iOv-jehuC8izC-1eR8NVgkorNW5wtrpn1up5MB4M_fQQP-iS98orvofdnGjrgr0t3PVD7jJeR6_6d1hxfrbDz14WHSSywZFde6akGPBsPLezC9kKJNKrd-JuUM_VyObB_D63rA_xJ9z4AS6B2jYJ-qucq801SDoocBPFuu0kM3JaR5EcWm4gJlEsNcvwvYH9n4tO6_gH3MjbhHomNNq9NtJXptRNf0WGKAXgTAoHK_FG0Gg-s7J-py3JA"}]
+ 
+2016-05-23 23:27:30.6786 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"RP0000003277","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:27:30.6786 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:0b07db81-bc41-455a-92a1-dbd9362098a2
+Error Number:8178,State:1,Class:16
+2016-05-23 23:27:30.6786 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(12),@first_name nvarchar(10),@last_name nv' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:0b07db81-bc41-455a-92a1-dbd9362098a2
+Error Number:8178,State:1,Class:16
+2016-05-23 23:29:32.1161 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"7zTPygDQrULcfPPbAkPVrak4lA9HUNRtotNCeL3vFoA=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:27:29.647","ExpiresUtc":"2016-05-30T23:27:29.647","ProtectedTicket":"e-vJDJ8svBiJhVEo_MncDk7OXBHDAlGHtU8ExK2mJCU_uU_1L24ntb0Rlaqo2TqHNOXOECt7V6EbB72nsa1cxzqBl9uGjOWBFxuluMVSFVFQ3RyvBuMHIEcmi3PS06BuwStE3uYIM-pDtJ0XMM5px-LDswhk4caviM7b_U4HkrOME4kIspHQCBVCI5aEBxXPRkgXQXYCGUJRPZ4rk1EeZKkyrf6CodYRGkaYvsNCKQqQNMgHMv2WIeF-vKLavA3MZwaUXhkNZicQI3DSCfXd1jrAQe2J3cXLtx-GROIAX90Jp67wWWdh1tCM3oyTsU_U4AaFNFAFdkIo-tXQXZ2mR-XDN3JcPF1YA3HF2KmZD0nc7jNepsJevhUzMGV9R4AzukRnj3BINe8pqvYKbhEXJlM3XDUjLtpl_9cokihjcMLS5UkhFLjqH7N8BIccXi3fTbNnpV3KEq6rz9Mi5BHGqg"}]
+ 
+2016-05-23 23:29:33.1474 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"8097","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:29:33.1474 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:29:33.1630 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:33:23.1006 [TRACE] - notauth:: - AuthRepository - RemoveRefreshToken 1 rows saved for token [{"Client":null,"Id":"EDwnhH+L5gizI4x3JiV591HqlCYr3hM+uxw0ejyN134=","Subject":"MagentoAuIntegrationUser","ClientId":null,"IssuedUtc":"2016-05-23T23:29:32.1","ExpiresUtc":"2016-05-30T23:29:32.1","ProtectedTicket":"75tT3h0M_8MCeI9y5paC8pf7yZzlsJqpsZ20fwMkJb7GIyIxSWxIq9ajkU4heUe3_-z5tCl_ET7qCFZ2qeSukDK2mXlh53PIdSDRf-85sqWDjRM1sYtBht7K06CP0SWFX5a5DQYdv64HlGlU_f3_zmEnVB1OSDC2JtFtVfRwXFIs-lZT5L_AHarxLhigqyojh1XNslv5r57J3VnzGjhEIUwVBB7pcv_8iG-DoaBEB7UvnrJXqQrak0GJ3CVChE_slMoXvD7lw8nTaEayIuOJkvXhXqi2IMHD5zQ3xuuMA9UAsHAhulOpaBX7cG6H9kAwcVaUlf0p4zwpmhoP86-JBnaGS3Lwnqw6u9OHddvK_OdO-xkMBdILek5eELFBvCvS1jkwebhp__ukaM3f85f_tGq_NZ6lmR7dq3zGqltl1WKYqrijpg6RtXZqPLjCwipW-kzxG0_6eqWq0xi6iwxwAg"}]
+ 
+2016-05-23 23:33:24.1475 [TRACE] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - SubscriptionsController AddSubscription() called [{"AccountId":"8097","FirstName":"1.5au test","LastName":"Test","Gender":"","PhoneNumber":"","MobileNumber":"","EmailAddress":"1.5au.ubt@gmail.com","Address":"test address, NSW 2114, Sydney, AU","Locality":"ADELAIDE","Country":"AU","DateOfBirth":null,"Notes":"","ProductCode":"11-118-11282"}]
+ 
+2016-05-23 23:33:24.1475 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - UserRepository - {0}
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 446
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
+2016-05-23 23:33:24.1475 [ERROR] - auth:Bearer:MagentoAuIntegrationUser - SubscriptionsController - Error adding a new subscription
+ System.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@account_id nvarchar(4),@first_name nvarchar(10),@last_name nva' expects the parameter '@date_of_birth', which was not supplied.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__167_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryInternalAsync>d__6f`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Utilities.TaskExtensions.CultureAwaiter`1.GetResult()
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Core.Objects.ObjectContext.<ExecuteStoreQueryReliablyAsync>d__6c`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Internal.LazyAsyncEnumerator`1.<FirstMoveNextAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstOrDefaultAsync>d__25`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Repositories.SubscriptionRepository.<AddPendingSignupAsync>d__8.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Repositories\SubscriptionRepository.cs:line 473
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ConnectAPI.Controllers.SubscriptionsController.<AddSubscription>d__1.MoveNext() in C:\Program Files (x86)\Jenkins\jobs\Connect API 1.0\workspace\ConnectAPI\Controllers\SubscriptionsController.cs:line 47
+ClientConnectionId:17502b4a-e773-45a2-b112-c5bb6f157dde
+Error Number:8178,State:1,Class:16
